@@ -21,14 +21,20 @@
         class="topnav-logo"
         onclick="location.href='/'"
         ,
-        style="padding: 0; cursor: pointer"
+        style="padding: 0; cursor: pointer; flex-grow: 0"
       >
         <img src="static/img/OnTime.PNG" alt="Logo" srcset="" />
         <h2>OnTime</h2>
       </div>
-      <h3 style="flex-grow: 2; text-align: left; font-size: 2rem">
-        Study Group
-      </h3>
+      <div
+        id="user"
+        style="flex-grow: 2; align-content: center; justify-content: center"
+      >
+        <h3 style="font-size: 2rem; text-align: center">Study Group</h3>
+        <h3 style="font-size: 1rem; text-align: center; cursor: pointer">
+          www.ontime.com/group/study-group
+        </h3>
+      </div>
       <div id="user">
         <h3>Hi, {{user["username"]}}</h3>
         <h3>Aura: {{user["scores"]}}</h3>
