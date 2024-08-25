@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="static/style.css" />
+    <link rel="shortcut icon" href="img/OnTime.PNG" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="topnav">
+      <div
+        class="topnav-logo"
+        onclick="location.href='/'"
+        ,
+        style="padding: 0; cursor: pointer"
+      >
+        <img src="static/img/OnTime.PNG" alt="Logo" srcset="" />
+        <h2>OnTime</h2>
+      </div>
+      <h3 style="flex-grow: 2; text-align: left; font-size: 2rem">
+        Study Group
+      </h3>
+      <div id="user">
+        <h3>Hi, {{user["username"]}}</h3>
+        <h3>Aura: {{user["scores"]}}</h3>
+      </div>
+      <h3 onclick="location.href='/logout'" style="padding: 0; cursor: pointer">
+        <u>Log Out</u>
+      </h3>
+    </div>
+    <div class="main-content">
+      <div class="container-wrapper">
+        <div class="left-container">
+          <h3>Leaderboard</h3>
+          <div class="container-leaderboard">
+            <ul class="ul-leaderboard">
+              <li class="li-leader" style="color: gold">
+                <i class="fas fa-medal"></i> JuanK : 7800 Points
+              </li>
+              <li class="li-leader" style="color: silver">
+                <i class="fas fa-medal"></i> LordDarryl : 6900 Points
+              </li>
+              <li class="li-leader" style="color: #ce8946">
+                <i class="fas fa-medal"></i> Harambe : 6700 Points
+              </li>
+              <li class="li-leaderboard">4. Yerizz : 6500 Points</li>
+              <li class="li-leaderboard">5. FisherLee : 6200 Points</li>
+              <li class="li-leaderboard">6. Moti69 : 5800 Points</li>
+              <li class="li-leaderboard">7. Austis : 5400 Points</li>
+              <li class="li-leaderboard">8. Feetpic : 4600 Points</li>
+              <li class="li-leaderboard">9. Unjian : 4500 Points</li>
+              <li class="li-leaderboard">10. Smelly60 : 4400 Points</li>
+            </ul>
+          </div>
+        </div>
+        <div class="right-container">
+          <h3>Feed</h3>
+          <div class="container-feed">
+            <div class="feed-item">
+              <h4>JuanK</h4>
+              <h5>Study</h5>
+              <img src="static/img/task.jpg" alt="Task image" />
+              <div class="feed-buttons">
+                <button
+                  class="check"
+                  id="check-1"
+                  onclick="switchIt('cross-1')"
+                >
+                  ✓
+                </button>
+                <button
+                  class="cross"
+                  id="cross-1"
+                  onclick="switchIt('check-1')"
+                >
+                  X
+                </button>
+              </div>
+            </div>
+            <div class="feed-item">
+              <h4>Yerizz</h4>
+              <h5>Online Study Meeting</h5>
+              <img src="static/img/task1.png" alt="Task image" />
+              <div class="feed-buttons">
+                <button
+                  class="check"
+                  id="check-2"
+                  onclick="switchIt('cross-2')"
+                >
+                  ✓
+                </button>
+                <button
+                  class="cross"
+                  id="cross-2"
+                  onclick="switchIt('check-2')"
+                >
+                  X
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function switchIt(id) {
+      document.getElementById(id).hidden = true;
+    }
+  </script>
+</html>
